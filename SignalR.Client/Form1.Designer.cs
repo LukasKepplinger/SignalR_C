@@ -43,6 +43,9 @@
             this.btConnectIo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCreateCorn = new System.Windows.Forms.Button();
+            this.btnConnectCorn = new System.Windows.Forms.Button();
+            this.btnSendCorn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -201,11 +204,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Message-Controller";
             // 
+            // btnCreateCorn
+            // 
+            this.btnCreateCorn.Location = new System.Drawing.Point(547, 67);
+            this.btnCreateCorn.Name = "btnCreateCorn";
+            this.btnCreateCorn.Size = new System.Drawing.Size(131, 23);
+            this.btnCreateCorn.TabIndex = 22;
+            this.btnCreateCorn.Text = "Create Cornnection";
+            this.btnCreateCorn.UseVisualStyleBackColor = true;
+            // 
+            // btnConnectCorn
+            // 
+            this.btnConnectCorn.Location = new System.Drawing.Point(547, 96);
+            this.btnConnectCorn.Name = "btnConnectCorn";
+            this.btnConnectCorn.Size = new System.Drawing.Size(131, 23);
+            this.btnConnectCorn.TabIndex = 23;
+            this.btnConnectCorn.Text = "Cornnect";
+            this.btnConnectCorn.UseVisualStyleBackColor = true;
+            // 
+            // btnSendCorn
+            // 
+            this.btnSendCorn.Location = new System.Drawing.Point(547, 125);
+            this.btnSendCorn.Name = "btnSendCorn";
+            this.btnSendCorn.Size = new System.Drawing.Size(131, 23);
+            this.btnSendCorn.TabIndex = 24;
+            this.btnSendCorn.Text = "Send Corn";
+            this.btnSendCorn.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 619);
+            this.Controls.Add(this.btnSendCorn);
+            this.Controls.Add(this.btnConnectCorn);
+            this.Controls.Add(this.btnCreateCorn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbResponse);
@@ -239,5 +272,8 @@
         private Button btConnectId;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
+        private Button btnCreateCorn;
+        private Button btnConnectCorn;
+        private Button btnSendCorn;
     }
 }

@@ -7,6 +7,7 @@ namespace SignalR.Client
     {
         public ChatService chatService { get; set; }
         public IoService ioService { get; set; }
+        public CornService cornService { get; set; }
 
         public Form1()
         {
@@ -44,6 +45,44 @@ namespace SignalR.Client
                 lbResponse.Items.Add(tbText.Text + " could not be sent");
             }
         }
+
+
+
+
+
+
+
+
+
+
+        private async void btnCreateCorn_Click(object sender, EventArgs e)
+        {
+            cornService = new CornService();
+            string address = "http://172.17.243.232:5100/chat";
+            lbResponse.Items.Add(cornService.CreateConnection(address));
+        }
+
+        private void btnConnectCorn_Click(object sender, EventArgs e)
+        {
+            cornService.Connect();
+            lbResponse.Items.Add("Corn-Connection is active");
+        }
+
+        private async void btnSendCorn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                await cornService.SendMessage();
+                lbResponse.Items.Add("Corn was sent");
+            }
+            catch (Exception)
+            {
+                lbResponse.Items.Add(tbText.Text + " could not be sent");
+            }
+        }
+
+
+
 
 
 
